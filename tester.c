@@ -8,6 +8,6 @@ int main(int argc, char *argv[])
 */
 
   printf("Trying to connect to server\n");
-  ifttt("http://red.eecs.yorku.ca:8080/trigger/event/with/key/verchiel", "Alarm", "event", "no motion");
+  ifttt("http://red.eecs.yorku.ca:8080/trigger/event/with/key/verchiel", "Alarm", "tracked", "HELP!");
   return 0;
 }

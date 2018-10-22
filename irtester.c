@@ -1,7 +1,5 @@
 #include <stdio.h>
 #include <wiringPi.h>
-#include "ifttt.h"
-#include <curl/curl.h>
 
 int main(int argc, char *argv[])
 {
@@ -14,9 +12,9 @@ int main(int argc, char *argv[])
   while(1) {
     printf("Waiting for reset\n");
     while(digitalRead(0) == 1);
-    ifttt("http://red.eecs.yorku.ca:8080/trigger/event/with/key/verchiel","Alert","event","no motion");
+    ifttt("http://red.eecs.yorku.ca:8080/trigger/event/with/key/verchiel","Alert!!","HELP!!","CALL SPIDER MAN!!");
     digitalWrite(1,HIGH);
-    digitalWrite(2,LOW);
+    digitalWrite(2,LOW);  
     printf("Blue LED is already on before the user waved hand and after\n");
     printf("Waiting for event\n");
     while(digitalRead(0) == 0);
